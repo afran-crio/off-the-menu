@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your System - Off The Menu</title>
+  <meta name="description" content="Answer a few quick questions and we'll recommend the right creative system for your brand.">
+  <link rel="icon" type="image/png" href="assets/logos/otm_monogram_color.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/conversation.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/logos/otm_wordmark_color.png" alt="Off The Menu">
+      </a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="services.html" class="nav__link">Services</a>
+        <a href="contact.html" class="nav__cta">Get in Touch</a>
+      </div>
+      <div class="nav__hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav__mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ========== CONVERSATION ========== -->
+  <section class="convo">
+    <div class="container">
+
+      <!-- Progress bar -->
+      <div class="convo__progress">
+        <div class="convo__progress-bar" id="progressBar"></div>
+      </div>
+
+      <!-- Screen 0: Intro -->
+      <div class="convo__screen convo__screen--active" id="screen-intro">
+        <p class="label">Let's Find Your System</p>
+        <h1>Tell us where your brand is, and we'll show you <em>where it can go.</em></h1>
+        <p class="convo__subtitle">6 quick questions. No fluff. You'll get a personalised recommendation and quote in under 2 minutes.</p>
+        <button class="btn btn--primary convo__start" id="startBtn">
+          Let's Begin
+          <span class="btn__arrow">&rarr;</span>
+        </button>
+      </div>
+
+      <!-- Screen 1: Name & Brand -->
+      <div class="convo__screen" id="screen-name">
+        <div class="convo__question-num">First, a quick intro</div>
+        <h2>Who are we speaking with?</h2>
+        <p>This helps us personalise your recommendation.</p>
+        <div class="convo__form-fields">
+          <div class="convo__field">
+            <label for="userName">Your Name</label>
+            <input type="text" id="userName" placeholder="e.g. Arjun" autocomplete="off">
+          </div>
+          <div class="convo__field">
+            <label for="brandName">Brand / Venue Name</label>
+            <input type="text" id="brandName" placeholder="e.g. Café Saudade" autocomplete="off">
+          </div>
+        </div>
+        <button class="btn btn--primary convo__next" id="nameNext">
+          Continue
+          <span class="btn__arrow">&rarr;</span>
+        </button>
+      </div>
+
+      <!-- Screen 2: Q1 - Brand Stage -->
+      <div class="convo__screen" id="screen-q1">
+        <div class="convo__question-num">01 / 05</div>
+        <h2>Where is your brand right now?</h2>
+        <p>Pick the one that best describes your current stage.</p>
+        <div class="convo__options" data-question="stage">
+          <button class="convo__option" data-value="launching">
+            <span class="convo__option-title">Launching Soon</span>
+            <span class="convo__option-desc">We're new or about to open - need to build everything from scratch</span>
+          </button>
+          <button class="convo__option" data-value="early">
+            <span class="convo__option-title">Open but Inconsistent</span>
+            <span class="convo__option-desc">We're running, but our brand presence feels scattered and reactive</span>
+          </button>
+          <button class="convo__option" data-value="established">
+            <span class="convo__option-title">Established & Growing</span>
+            <span class="convo__option-desc">We have traction but need to level up how we show up</span>
+          </button>
+          <button class="convo__option" data-value="multi">
+            <span class="convo__option-title">Multi-Outlet or Expanding</span>
+            <span class="convo__option-desc">We're scaling - need creative leadership across locations or concepts</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Screen 3: Q2 - Biggest Challenge -->
+      <div class="convo__screen" id="screen-q2">
+        <div class="convo__question-num">02 / 05</div>
+        <h2>What's the biggest challenge you're facing?</h2>
+        <p>What keeps you up at night about your brand?</p>
+        <div class="convo__options" data-question="challenge">
+          <button class="convo__option" data-value="no-identity">
+            <span class="convo__option-title">No Clear Brand Identity</span>
+            <span class="convo__option-desc">Our visuals, tone, and messaging feel disconnected or generic</span>
+          </button>
+          <button class="convo__option" data-value="no-content">
+            <span class="convo__option-title">Inconsistent Content</span>
+            <span class="convo__option-desc">We post when we can, but there's no strategy or rhythm behind it</span>
+          </button>
+          <button class="convo__option" data-value="no-story">
+            <span class="convo__option-title">No Narrative or Campaigns</span>
+            <span class="convo__option-desc">We have good content but no storytelling arc or campaign structure</span>
+          </button>
+          <button class="convo__option" data-value="no-direction">
+            <span class="convo__option-title">Lack of Creative Direction</span>
+            <span class="convo__option-desc">We need someone to own the brand vision and lead creative decisions</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Screen 4: Q3 - Content Setup -->
+      <div class="convo__screen" id="screen-q3">
+        <div class="convo__question-num">03 / 05</div>
+        <h2>How is your content currently handled?</h2>
+        <p>Be honest - this helps us understand where to start.</p>
+        <div class="convo__options" data-question="content">
+          <button class="convo__option" data-value="nothing">
+            <span class="convo__option-title">We don't have anything set up yet</span>
+            <span class="convo__option-desc">No content calendar, no shoots, no strategy</span>
+          </button>
+          <button class="convo__option" data-value="diy">
+            <span class="convo__option-title">We handle it in-house (DIY)</span>
+            <span class="convo__option-desc">Someone on the team posts, but it's not their core skill</span>
+          </button>
+          <button class="convo__option" data-value="freelancers">
+            <span class="convo__option-title">We use freelancers or an agency</span>
+            <span class="convo__option-desc">We outsource, but results feel inconsistent or disconnected</span>
+          </button>
+          <button class="convo__option" data-value="managed">
+            <span class="convo__option-title">We have a team, but need leadership</span>
+            <span class="convo__option-desc">The pieces are there but we need someone to direct it all</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Screen 5: Q4 - Priority -->
+      <div class="convo__screen" id="screen-q4">
+        <div class="convo__question-num">04 / 05</div>
+        <h2>What matters most to you right now?</h2>
+        <p>Pick your top priority.</p>
+        <div class="convo__options" data-question="priority">
+          <button class="convo__option" data-value="visibility">
+            <span class="convo__option-title">Get Visible Online</span>
+            <span class="convo__option-desc">We need to build an audience and start showing up consistently</span>
+          </button>
+          <button class="convo__option" data-value="narrative">
+            <span class="convo__option-title">Tell a Better Story</span>
+            <span class="convo__option-desc">We want campaigns and narratives that make people feel something</span>
+          </button>
+          <button class="convo__option" data-value="growth">
+            <span class="convo__option-title">Drive Real Growth</span>
+            <span class="convo__option-desc">We need bookings, footfall, and measurable business outcomes</span>
+          </button>
+          <button class="convo__option" data-value="leadership">
+            <span class="convo__option-title">Creative Leadership</span>
+            <span class="convo__option-desc">We need a creative partner to lead brand direction end-to-end</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Screen 6: Q5 - Extras -->
+      <div class="convo__screen" id="screen-q5">
+        <div class="convo__question-num">05 / 05</div>
+        <h2>Anything else on your mind?</h2>
+        <p>Select any that apply - these help us suggest the right add-ons and build your quote.</p>
+        <div class="convo__options convo__options--multi" data-question="extras">
+          <button class="convo__option convo__option--multi" data-value="website">
+            <span class="convo__option-title">We need a website or digital menu</span>
+          </button>
+          <button class="convo__option convo__option--multi" data-value="paid-media">
+            <span class="convo__option-title">We want to run paid ads (Meta / Google)</span>
+          </button>
+          <button class="convo__option convo__option--multi" data-value="influencer">
+            <span class="convo__option-title">Influencer or creator collaborations</span>
+          </button>
+          <button class="convo__option convo__option--multi" data-value="launch">
+            <span class="convo__option-title">We're planning a launch or relaunch</span>
+          </button>
+          <button class="convo__option convo__option--multi" data-value="events">
+            <span class="convo__option-title">We host events and need coverage</span>
+          </button>
+          <button class="convo__option convo__option--multi" data-value="packaging">
+            <span class="convo__option-title">We need branding, packaging, or merch</span>
+          </button>
+          <button class="convo__option convo__option--multi" data-value="founder">
+            <span class="convo__option-title">Build the founder's personal brand</span>
+          </button>
+          <button class="convo__option convo__option--multi" data-value="none">
+            <span class="convo__option-title">Nothing else - just the core system</span>
+          </button>
+        </div>
+        <button class="btn btn--primary convo__next" id="extrasNext" style="margin-top: 32px;">
+          See My Recommendation
+          <span class="btn__arrow">&rarr;</span>
+        </button>
+      </div>
+
+      <!-- Screen 7: Result -->
+      <div class="convo__screen" id="screen-result">
+        <div class="convo__result" id="resultContent">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="assets/logos/otm_wordmark_white.png" alt="Off The Menu" class="footer__logo">
+          <p>Brand strategy and content production studio for India's modern hospitality.</p>
+        </div>
+        <div>
+          <h4>Navigate</h4>
+          <div class="footer__links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <div class="footer__links">
+            <a href="services.html">Brand & Visibility</a>
+            <a href="services.html">Narrative & Campaign</a>
+            <a href="services.html">Creative Leadership</a>
+            <a href="services.html">Extensions</a>
+          </div>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <div class="footer__links">
+            <a href="mailto:otm@crioconnect.com">otm@crioconnect.com</a>
+            <a href="tel:+917972405197">+91 7972405197</a>
+            <a href="https://instagram.com/offthemenu.in" target="_blank" rel="noopener">@offthemenu.in</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Off The Menu. Powered by Crio Connect.</p>
+        <div class="footer__social">
+          <a href="https://instagram.com/offthemenu.in" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/conversation.js"></script>
+</body>
+</html>
