@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://offthemenu.co.in/sitemap.xml
