@@ -22,21 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const nameNext = document.getElementById('nameNext');
   const extrasNext = document.getElementById('extrasNext');
 
-  // --- Systems data ---
+  // --- Systems data (USD, 1.5x markup) ---
   const systems = {
     starter: {
       name: 'Brand & Visibility System',
       tier: 'Starter',
       audience: 'For brands that need a clear identity, consistent presence, and a strong content foundation to get noticed.',
-      price: 55000,
-      priceLabel: '₹55,000/month',
-      term: 'Minimum 3-month retainer · 1 shoot/month · 8–10 assets per shoot',
-      desc: 'This system is built for brands just getting started or those who need to reset their online presence. We establish your visual identity, content rhythm, and foundational strategy.',
+      price: 999,
+      priceLabel: '$999/month',
+      term: 'Minimum 3-month retainer · 1 shoot/month · 8-10 assets per shoot',
+      desc: 'We establish your visual identity, content rhythm, and foundational strategy.',
       features: [
         'Brand Positioning & Verbal Identity',
         'Visual Direction & Content Style Guide',
         'Monthly Content Calendar',
-        '1 Shoot per Month (8–10 assets)',
+        '1 Shoot per Month (8-10 assets)',
         'Content Editing & Post Production',
         'Social Media Management',
         'Monthly Performance Review'
@@ -46,14 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Narrative & Campaign System',
       tier: 'Growth',
       audience: 'For brands ready to move beyond posting and into strategic storytelling, campaigns, and real audience growth.',
-      price: 75000,
-      priceLabel: '₹75,000/month',
-      term: 'Minimum 3-month retainer · 2 shoots/month · 12–14 assets per shoot',
-      desc: 'This system layers in narrative development, campaign thinking, and a higher content cadence. You already have the basics - now it\'s about depth and momentum.',
+      price: 1349,
+      priceLabel: '$1,349/month',
+      term: 'Minimum 3-month retainer · 2 shoots/month · 12-14 assets per shoot',
+      desc: 'Narrative development, campaign thinking, and a higher content cadence for depth and momentum.',
       features: [
         'Everything in Starter, plus:',
         'Narrative & Campaign Strategy',
-        '2 Shoots per Month (12–14 assets)',
+        '2 Shoots per Month (12-14 assets)',
         'Reels & Short-Form Video Content',
         'Campaign Planning & Execution',
         'Community Management',
@@ -63,15 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
     premium: {
       name: 'Creative Leadership & Direction',
       tier: 'Premium',
-      audience: 'For established or multi-outlet brands that need a creative partner to lead brand direction, campaigns, and growth end-to-end.',
-      price: 110000,
-      priceLabel: '₹1,10,000 – ₹1,35,000/month',
-      term: 'Minimum 6-month retainer · 3+ shoots/month · 16–18 assets per shoot',
-      desc: 'This is full creative leadership. We operate as your brand\'s creative team - owning strategy, storytelling, production, and growth across all touchpoints.',
+      audience: 'For established or multi-outlet brands that need a creative partner to lead brand direction end-to-end.',
+      price: 1999,
+      priceLabel: '$1,999 - $2,499/month',
+      term: 'Minimum 6-month retainer · 3+ shoots/month · 16-18 assets per shoot',
+      desc: 'Full creative leadership. We operate as your brand\'s creative team across all touchpoints.',
       features: [
         'Everything in Growth, plus:',
         'Creative Direction & Brand Leadership',
-        '3+ Shoots per Month (16–18 assets)',
+        '3+ Shoots per Month (16-18 assets)',
         'Multi-Platform Content Strategy',
         'Founder & Team Visibility Strategy',
         'Advanced Campaign Systems',
@@ -84,51 +84,51 @@ document.addEventListener('DOMContentLoaded', () => {
   const extensions = {
     website: {
       name: 'Digital Experience & Website Strategy',
-      desc: 'Custom website design or digital menu system that aligns with your brand identity.',
-      price: 35000,
-      priceLabel: '₹35,000',
+      desc: 'Custom website design or digital menu system aligned with your brand identity.',
+      price: 649,
+      priceLabel: '$649',
       billing: 'one-time setup'
     },
     'paid-media': {
       name: 'Paid Media & Growth',
-      desc: 'Meta & Google ad campaigns designed to drive footfall, bookings, and measurable growth.',
-      price: 20000,
-      priceLabel: '₹20,000/month',
+      desc: 'Strategic paid media planning, creative direction, and performance optimisation.',
+      price: 349,
+      priceLabel: '$349/month',
       billing: 'per month + ad spend'
     },
     influencer: {
       name: 'Creator & Community Marketing',
-      desc: 'Influencer collaborations, creator seeding, and community-driven marketing strategies.',
-      price: 15000,
-      priceLabel: '₹15,000/month',
+      desc: 'Creator strategy, influencer shortlisting, and collaboration concepts.',
+      price: 249,
+      priceLabel: '$249/month',
       billing: 'per month'
     },
     launch: {
       name: 'Launch Strategy & PR Visibility',
-      desc: 'End-to-end launch planning - from pre-launch buzz to opening day coverage and PR outreach.',
-      price: 40000,
-      priceLabel: '₹40,000',
+      desc: 'Launch narrative, campaign planning, PR development, and media coordination.',
+      price: 699,
+      priceLabel: '$699',
       billing: 'per launch'
     },
     events: {
       name: 'Event Amplification & Documentation',
-      desc: 'Professional event coverage, real-time content creation, and post-event storytelling.',
-      price: 15000,
-      priceLabel: '₹15,000',
+      desc: 'Pre-event storytelling, on-ground direction, and post-event recap strategy.',
+      price: 249,
+      priceLabel: '$249',
       billing: 'per event'
     },
     packaging: {
       name: 'Brand Systems, Packaging & Merchandise',
-      desc: 'Menu design, packaging, merchandise, and physical brand collateral that match your digital presence.',
-      price: 25000,
-      priceLabel: '₹25,000',
+      desc: 'Visual system design, menu design direction, and production-ready asset handover.',
+      price: 449,
+      priceLabel: '$449',
       billing: 'project-based'
     },
     founder: {
       name: 'Thought Leadership & Founder Visibility',
-      desc: 'Position the founder as a voice in the industry through content, speaking opportunities, and personal branding.',
-      price: 20000,
-      priceLabel: '₹20,000/month',
+      desc: 'Founder narrative, content themes, and visibility strategy across platforms.',
+      price: 349,
+      priceLabel: '$349/month',
       billing: 'per month'
     }
   };
@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function formatCurrency(num) {
-    return '₹' + num.toLocaleString('en-IN');
+    return '$' + num.toLocaleString('en-US');
   }
 
   function generateResult() {

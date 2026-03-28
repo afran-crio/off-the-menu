@@ -19,7 +19,7 @@
   --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 
   --max-width: 1200px;
-  --section-padding: 120px 0;
+  --section-padding: 100px 0;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -219,7 +219,7 @@ section {
 }
 
 .nav__logo img {
-  height: 44px;
+  height: 56px;
   width: auto;
 }
 
@@ -365,10 +365,10 @@ section {
 }
 
 .hero__subtitle {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   line-height: 1.8;
   color: var(--text-light);
-  max-width: 560px;
+  max-width: 520px;
   margin-bottom: 48px;
 }
 
@@ -422,10 +422,104 @@ section {
 }
 
 /* ============================================
+   BACKED BY BANNER (Homepage)
+   ============================================ */
+.backed-banner {
+  background: var(--navy-dark);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.backed-banner a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  transition: color 0.3s ease;
+}
+
+.backed-banner a:hover {
+  color: var(--white);
+}
+
+.backed-banner img {
+  height: 22px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+
+.backed-banner .backed-banner__arrow {
+  transition: transform 0.3s ease;
+}
+
+.backed-banner a:hover .backed-banner__arrow {
+  transform: translateX(4px);
+}
+
+/* ============================================
+   LOGO MARQUEE
+   ============================================ */
+.marquee {
+  background: var(--cream);
+  padding: 48px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee__label {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.marquee__track {
+  display: flex;
+  animation: marqueeScroll 30s linear infinite;
+  width: max-content;
+}
+
+.marquee__track:hover {
+  animation-play-state: paused;
+}
+
+.marquee__logos {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 0 24px;
+}
+
+.marquee__logo {
+  height: 60px;
+  width: auto;
+  min-width: 100px;
+  max-width: 160px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.4;
+  transition: all 0.4s ease;
+  flex-shrink: 0;
+}
+
+.marquee__logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ============================================
    ABOUT / PHILOSOPHY SECTION
    ============================================ */
 .about {
-  background-color: var(--white);
+  background-color: var(--cream);
 }
 
 .about__grid {
@@ -507,12 +601,12 @@ section {
 
 .system__header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 64px;
 }
 
 .system__header h2 {
   color: var(--navy);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .system__header p {
@@ -522,14 +616,14 @@ section {
 .system__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
+  gap: 32px;
 }
 
 .system__card {
   text-align: center;
-  padding: 48px 32px;
+  padding: 40px 28px;
   border: 1px solid var(--warm-gray);
-  background: var(--white);
+  background: var(--cream);
   transition: var(--transition);
 }
 
@@ -541,27 +635,27 @@ section {
 
 .system__number {
   font-family: var(--font-serif);
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: var(--navy);
   opacity: 0.15;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   line-height: 1;
 }
 
 .system__card h3 {
   color: var(--navy);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   font-style: italic;
 }
 
 .system__card p {
   margin: 0 auto;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }
 
 .system__footer {
   text-align: center;
-  margin-top: 64px;
+  margin-top: 48px;
 }
 
 .system__footer p {
@@ -577,29 +671,29 @@ section {
    SERVICES / WHAT WE LEAD
    ============================================ */
 .services {
-  background-color: var(--white);
+  background-color: var(--cream);
 }
 
 .services__header {
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 }
 
 .services__header h2 {
   color: var(--navy);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .services__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 }
 
 .services__item {
-  padding: 28px 24px;
+  padding: 24px 20px;
   border-bottom: 1px solid var(--warm-gray);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 500;
   color: var(--text);
   transition: var(--transition);
@@ -634,24 +728,16 @@ section {
 
 .retainers__header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 64px;
 }
 
 .retainers__header h2 {
   color: var(--navy);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .retainers__header p {
   margin: 0 auto;
-}
-
-.retainers__principle {
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
-  color: var(--navy) !important;
-  font-style: italic;
-  margin: 16px auto 0 !important;
 }
 
 .retainers__grid {
@@ -661,8 +747,8 @@ section {
 }
 
 .retainer-card {
-  background: var(--white);
-  padding: 48px 36px;
+  background: var(--cream);
+  padding: 44px 32px;
   border: 1px solid var(--warm-gray);
   transition: var(--transition);
   display: flex;
@@ -691,7 +777,7 @@ section {
 }
 
 .retainer-card__audience {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: var(--text-light);
   margin-bottom: 20px;
   line-height: 1.6;
@@ -718,7 +804,7 @@ section {
 }
 
 .retainer-card__desc {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--text-light);
   line-height: 1.7;
   margin-bottom: 24px;
@@ -730,9 +816,9 @@ section {
 }
 
 .retainer-card__features li {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: var(--text);
-  padding: 8px 0;
+  padding: 7px 0;
   padding-left: 20px;
   position: relative;
   border-bottom: 1px solid rgba(0,0,0,0.04);
@@ -742,7 +828,7 @@ section {
   content: '';
   position: absolute;
   left: 0;
-  top: 16px;
+  top: 14px;
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -775,26 +861,26 @@ section {
    EXTENSIONS
    ============================================ */
 .extensions {
-  background-color: var(--white);
+  background-color: var(--cream);
 }
 
 .extensions__header {
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 }
 
 .extensions__header h2 {
   color: var(--navy);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .extensions__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 20px;
 }
 
 .extension-card {
-  padding: 36px 32px;
+  padding: 32px 28px;
   border: 1px solid var(--warm-gray);
   transition: var(--transition);
 }
@@ -805,28 +891,28 @@ section {
 
 .extension-card__number {
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--navy);
   opacity: 0.2;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .extension-card h3 {
   color: var(--navy);
-  margin-bottom: 12px;
-  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-size: 1.15rem;
 }
 
 .extension-card p {
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: 0.88rem;
+  line-height: 1.6;
 }
 
 .extensions__note {
-  margin-top: 48px;
-  padding: 32px;
-  background: var(--cream);
-  font-size: 0.92rem;
+  margin-top: 40px;
+  padding: 28px;
+  background: var(--warm-gray);
+  font-size: 0.9rem;
   color: var(--text-light);
   line-height: 1.7;
   text-align: center;
@@ -887,7 +973,7 @@ section {
 }
 
 .step p {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   margin-bottom: 0;
 }
 
@@ -933,16 +1019,16 @@ section {
 }
 
 /* ============================================
-   PARTNERS
+   PARTNERS (Grid version for inner pages)
    ============================================ */
 .partners {
-  background: var(--white);
+  background: var(--cream);
   padding: 80px 0;
 }
 
 .partners__header {
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: 48px;
 }
 
 .partners__header h2 {
@@ -953,16 +1039,16 @@ section {
 
 .partners__grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
   align-items: center;
   justify-items: center;
 }
 
 .partners__logo {
   width: 100%;
-  max-width: 140px;
-  height: 80px;
+  max-width: 180px;
+  height: 100px;
   object-fit: contain;
   filter: grayscale(100%);
   opacity: 0.5;
@@ -1096,7 +1182,7 @@ section {
 }
 
 .footer__logo {
-  height: 24px;
+  height: 28px;
   width: auto;
 }
 
@@ -1153,23 +1239,23 @@ section {
    PAGE HEADERS
    ============================================ */
 .page-header {
-  padding: 180px 0 80px;
+  padding: 160px 0 60px;
   background-color: var(--cream);
 }
 
 .page-header .label {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .page-header h1 {
   color: var(--navy);
   max-width: 700px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .page-header p {
-  font-size: 1.15rem;
-  max-width: 560px;
+  font-size: 1.1rem;
+  max-width: 520px;
 }
 
 /* ============================================
@@ -1179,7 +1265,7 @@ section {
   background: var(--navy);
   color: var(--white);
   text-align: center;
-  padding: 100px 0;
+  padding: 80px 0;
 }
 
 .difference h2 {
@@ -1202,7 +1288,7 @@ section {
   background: var(--navy);
   color: var(--white);
   text-align: center;
-  padding: 100px 0;
+  padding: 80px 0;
 }
 
 .cta h2 {
@@ -1284,6 +1370,15 @@ section {
   .hero__image {
     display: none;
   }
+
+  .marquee__logo {
+    height: 48px;
+    min-width: 80px;
+  }
+
+  .marquee__logos {
+    gap: 32px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1305,6 +1400,10 @@ section {
 
   .nav__mobile {
     display: flex;
+  }
+
+  .nav__logo img {
+    height: 44px;
   }
 
   .hero {
@@ -1335,10 +1434,19 @@ section {
   }
 
   .page-header {
-    padding: 140px 0 60px;
+    padding: 120px 0 48px;
   }
 
   .retainer-card--featured {
     padding-top: 64px;
+  }
+
+  .marquee__logo {
+    height: 40px;
+    min-width: 60px;
+  }
+
+  .marquee__logos {
+    gap: 24px;
   }
 }
