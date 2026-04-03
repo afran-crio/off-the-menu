@@ -1494,6 +1494,187 @@ section {
 }
 
 /* ============================================
+   EXTENSIONS FULL (Services page)
+   ============================================ */
+.extensions--full {
+  background: var(--cream);
+}
+
+.ext-bucket {
+  margin-bottom: 72px;
+}
+
+.ext-bucket__header {
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--navy);
+  margin-bottom: 32px;
+}
+
+.ext-bucket__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.ext-bucket__desc {
+  color: var(--text-light);
+  font-size: 0.92rem;
+  max-width: 600px;
+}
+
+.ext-card {
+  border: 1px solid var(--warm-gray);
+  margin-bottom: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.ext-card:hover {
+  border-color: var(--navy);
+}
+
+.ext-card--featured {
+  border-color: var(--navy);
+  position: relative;
+}
+
+.ext-card--featured::before {
+  content: 'Full Campaign Package';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 7px;
+}
+
+.ext-card--featured .ext-card__top {
+  padding-top: 40px;
+}
+
+.ext-card__top {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 28px 32px;
+  border-bottom: 1px solid var(--warm-gray);
+}
+
+.ext-card__num {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--navy);
+  opacity: 0.15;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 48px;
+  padding-top: 4px;
+}
+
+.ext-card__name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--navy);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.ext-card__desc {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ext-card__body {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 0;
+}
+
+.ext-card__deliverables {
+  padding: 24px 32px;
+  border-right: 1px solid var(--warm-gray);
+}
+
+.ext-card__deliverables ul {
+  list-style: none;
+  margin-top: 12px;
+}
+
+.ext-card__deliverables ul li {
+  font-size: 0.86rem;
+  color: var(--text);
+  padding: 6px 0 6px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  position: relative;
+}
+
+.ext-card__deliverables ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--navy);
+  opacity: 0.35;
+}
+
+.ext-card__meta {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.ext-card__col-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.ext-card__meta p {
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.ext-card__price {
+  font-family: var(--font-serif);
+  font-size: 1.1rem !important;
+  color: var(--navy) !important;
+  margin-bottom: 6px !important;
+}
+
+.ext-card__price-note {
+  font-size: 0.78rem !important;
+  color: var(--text-light) !important;
+  line-height: 1.5 !important;
+}
+
+.ext-card__not {
+  padding: 12px 32px;
+  font-size: 0.78rem;
+  color: var(--text-light);
+  font-style: italic;
+  background: var(--warm-gray);
+  border-top: 1px solid var(--warm-gray);
+}
+
+/* ============================================
    EXTENSIONS 3-COLUMN
    ============================================ */
 .extensions__grid--3 {
@@ -1709,6 +1890,15 @@ section {
 
   .extensions__grid--3 {
     grid-template-columns: 1fr !important;
+  }
+
+  .ext-card__body {
+    grid-template-columns: 1fr;
+  }
+
+  .ext-card__deliverables {
+    border-right: none;
+    border-bottom: 1px solid var(--warm-gray);
   }
 
   .premium-callout__inner {
