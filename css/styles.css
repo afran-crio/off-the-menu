@@ -1350,10 +1350,39 @@ section {
   padding: var(--section-padding);
 }
 
+/* Inset variant: sits inside the retainers section */
+.premium-callout--inset {
+  background: var(--navy-dark);
+  color: var(--white);
+  padding: 56px 48px;
+  margin-top: 48px;
+  padding-top: 48px;
+}
+
+.premium-callout__eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 32px;
+  border-left: 2px solid rgba(255,255,255,0.2);
+  padding-left: 12px;
+}
+
+.premium-callout__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
 .premium-callout__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 64px;
   align-items: start;
 }
 
@@ -1684,7 +1713,11 @@ section {
 
   .premium-callout__inner {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
+  }
+
+  .premium-callout--inset {
+    padding: 40px 24px;
   }
 
   .services__two-col {
