@@ -56,36 +56,23 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- 1. HERO — category, edge, audience -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero__content">
-        <p class="hero__tagline">Brand Strategy &amp; Content Production</p>
-        <h1 class="hero__title">For hospitality brands that want to be <em>remembered.</em></h1>
-        <p class="hero__subtitle">Structured communication systems for restaurants, cafés, and bars. Not disconnected services.</p>
-        <div class="hero__actions">
-          <a href="services.html" class="btn btn--primary">
-            Explore Our Systems
-            <span class="btn__arrow">&rarr;</span>
-          </a>
-          <a href="contact.html" class="btn btn--outline">Start a Conversation</a>
-        </div>
+  <!-- 1. HERO -->
+  <section class="hero hero--centered">
+    <div class="container hero__container">
+      <img src="assets/logos/otm_wordmark_color.png" alt="Off The Menu" class="hero__logo">
+      <h1 class="hero__title hero__title--full">For hospitality brands that want to be <em>remembered.</em></h1>
+      <p class="hero__description">Off The Menu is a brand strategy and content production studio built exclusively for restaurants, cafes, and bars. We design structured communication systems that bring together strategy, storytelling, content production, and creative direction into one integrated partnership. No disconnected services. No one-off projects. Just a clear system built around where your brand is today and where it needs to go.</p>
+      <p class="hero__statement">Hospitality brands don't struggle because of a lack of content. They struggle because communication is built in fragments. Off The Menu builds the system that holds it together.</p>
+      <div class="hero__actions hero__actions--center">
+        <a href="contact.html" class="btn btn--primary">
+          Tell Us About Your Brand
+          <span class="btn__arrow">&rarr;</span>
+        </a>
+        <a href="services.html" class="btn btn--outline">Explore Our Systems</a>
       </div>
-      <img src="assets/images/hero_whisk.jpg" alt="" class="hero__image" aria-hidden="true">
-    </div>
-    <div class="hero__scroll">
-      <span>Scroll</span>
-      <div class="hero__scroll-line"></div>
+      <p class="hero__backed">Backed by <a href="https://crioconnect.com" target="_blank" rel="noopener">Crio Connect</a> &middot; Goa's leading hospitality &amp; experiential studio</p>
     </div>
   </section>
-
-  <!-- BACKED BY BANNER -->
-  <div class="backed-banner">
-    <a href="https://crioconnect.com" target="_blank" rel="noopener">
-      Backed by <img src="assets/logos/crio_connect_white_on_blue.png" alt="Crio Connect"> Goa's leading hospitality &amp; experiential studio
-      <span class="backed-banner__arrow">&rarr;</span>
-    </a>
-  </div>
 
   <!-- LOGO MARQUEE -->
   <div class="marquee">
@@ -144,15 +131,6 @@
     </div>
   </div>
 
-  <!-- 2. PROBLEM — create tension -->
-  <section class="problem">
-    <div class="container reveal">
-      <h2>Hospitality brands don't struggle because of a lack of content.</h2>
-      <p>They struggle because communication is built in fragments — content here, a campaign there, a launch handled separately. The brand loses clarity, consistency, and identity.</p>
-      <p class="problem__highlight">Off The Menu builds the system that holds it together.</p>
-    </div>
-  </section>
-
   <!-- 3. METHOD — how we work -->
   <section class="system">
     <div class="container">
@@ -183,20 +161,21 @@
     </div>
   </section>
 
-  <!-- 4. OUR SYSTEMS — the offer -->
+  <!-- 4. OUR SYSTEMS -->
   <section class="retainers">
     <div class="container">
       <div class="retainers__header reveal">
         <h2>Our Systems</h2>
         <p>Three retainer systems. Each one built around where your brand is today.</p>
       </div>
-      <div class="retainers__grid">
+
+      <!-- Starter + Growth: two-column -->
+      <div class="retainers__grid retainers__grid--two">
         <div class="retainer-card reveal">
-          <p class="retainer-card__tier">System 01</p>
-          <h3 class="retainer-card__name">Brand &amp; Visibility</h3>
+          <p class="retainer-card__tier">Starter</p>
+          <h3 class="retainer-card__name">Brand &amp; Visibility System</h3>
           <p class="retainer-card__audience">For early-stage or inconsistent brands that need a clean, credible, consistent public presence.</p>
-          <p class="retainer-card__price">From $999</p>
-          <p class="retainer-card__term">per month &middot; 90-day foundation</p>
+          <p class="retainer-card__term">90-day foundation</p>
           <div class="retainer-card__divider"></div>
           <ul class="retainer-card__features">
             <li>Brand foundation &amp; creative direction</li>
@@ -206,12 +185,11 @@
           </ul>
           <a href="services.html" class="btn btn--outline btn--sm">Learn More <span class="btn__arrow">&rarr;</span></a>
         </div>
-        <div class="retainer-card retainer-card--featured reveal reveal--delay-1">
-          <p class="retainer-card__tier">System 02</p>
-          <h3 class="retainer-card__name">Narrative &amp; Campaign</h3>
+        <div class="retainer-card reveal reveal--delay-1">
+          <p class="retainer-card__tier">Growth</p>
+          <h3 class="retainer-card__name">Narrative &amp; Campaign System</h3>
           <p class="retainer-card__audience">For active brands ready to move beyond announcements into storytelling and stronger recall.</p>
-          <p class="retainer-card__price">From $1,349</p>
-          <p class="retainer-card__term">per month &middot; 90-day foundation</p>
+          <p class="retainer-card__term">90-day foundation</p>
           <div class="retainer-card__divider"></div>
           <ul class="retainer-card__features">
             <li>Storytelling direction &amp; campaigns</li>
@@ -220,47 +198,48 @@
             <li>Event creative support</li>
             <li>Narrative review</li>
           </ul>
-          <a href="services.html" class="btn btn--primary btn--sm">Learn More <span class="btn__arrow">&rarr;</span></a>
-        </div>
-        <div class="retainer-card reveal reveal--delay-2">
-          <p class="retainer-card__tier">System 03</p>
-          <h3 class="retainer-card__name">Creative Leadership</h3>
-          <p class="retainer-card__audience">For established or multi-outlet brands that need creative authority and long-term brand governance.</p>
-          <p class="retainer-card__price">$1,999 &ndash; $2,499</p>
-          <p class="retainer-card__term">per month &middot; 90-day foundation</p>
-          <div class="retainer-card__divider"></div>
-          <ul class="retainer-card__features">
-            <li>Creative governance</li>
-            <li>Campaign leadership</li>
-            <li>Strategic content direction</li>
-            <li>Brand decision authority</li>
-            <li>Review-led growth</li>
-          </ul>
           <a href="services.html" class="btn btn--outline btn--sm">Learn More <span class="btn__arrow">&rarr;</span></a>
         </div>
       </div>
 
-      <!-- System 03 deep-dive — anchored inside this section -->
-      <div class="premium-callout premium-callout--inset reveal">
-        <div class="premium-callout__eyebrow">System 03 &mdash; Creative Leadership &amp; Direction</div>
-        <div class="premium-callout__inner">
-          <div class="premium-callout__left">
-            <h3 class="premium-callout__heading">This is not a content retainer. This is a creative leadership role.</h3>
-            <div class="divider divider--light"></div>
-            <p>At this level, Off The Menu acts as the brand's creative authority — shaping what should exist publicly, how it should be expressed, and how consistency is protected across time, teams, and platforms.</p>
+      <!-- Premium: full-width expanded detail -->
+      <div class="premium-detail reveal">
+        <div class="premium-detail__header">
+          <p class="premium-detail__tier">Premium</p>
+          <h3 class="premium-detail__name">Creative Leadership &amp; Direction</h3>
+          <p class="premium-detail__audience">For established or multi-outlet brands that need creative authority and long-term brand governance.</p>
+          <p class="premium-detail__term">90-day foundation</p>
+        </div>
+        <div class="premium-detail__body">
+          <div class="premium-detail__left">
+            <h4>Move beyond content.</h4>
+            <p>At this level, Off The Menu acts as the brand's creative authority, shaping what should exist publicly, how it should be expressed, and how consistency is protected across time, teams, and platforms.</p>
             <p>We step in to reduce reactive output, protect the brand from drift, and create a stronger filter across campaigns, launches, and everyday communication.</p>
           </div>
-          <div class="premium-callout__right">
-            <p class="premium-callout__subtitle">What changes for the client</p>
-            <ul class="premium-callout__list">
+          <div class="premium-detail__middle">
+            <p class="premium-detail__col-label">What's included</p>
+            <ul class="premium-detail__features">
+              <li>Creative governance</li>
+              <li>Campaign leadership</li>
+              <li>Strategic content direction</li>
+              <li>Brand decision authority</li>
+              <li>Review-led growth</li>
+            </ul>
+          </div>
+          <div class="premium-detail__right">
+            <p class="premium-detail__col-label">What changes for the client</p>
+            <ul class="premium-detail__features">
               <li>Less founder involvement in day-to-day creative decisions</li>
               <li>Fewer approval loops</li>
               <li>Faster publishing without quality loss</li>
               <li>Stronger brand consistency across touchpoints</li>
               <li>Better recall over time</li>
             </ul>
-            <p class="premium-callout__close">At this level, OTM stops simply producing content and starts protecting the brand.</p>
           </div>
+        </div>
+        <div class="premium-detail__footer">
+          <p class="premium-detail__close">At this level, OTM stops simply producing content and starts protecting the brand.</p>
+          <a href="services.html" class="btn btn--outline-light btn--sm">Learn More <span class="btn__arrow">&rarr;</span></a>
         </div>
       </div>
     </div>
@@ -273,7 +252,7 @@
         <div class="reveal">
           <h2>Backed by real hospitality depth</h2>
           <div class="divider divider--light"></div>
-          <p>Off The Menu is powered by Crio Connect — with direct experience across legacy brands, standalone restaurants, bars, cafés, boutique spaces, alco-bev labels, and festivals across Goa and India.</p>
+          <p>Off The Menu is powered by Crio Connect, with direct experience across legacy brands, standalone restaurants, bars, cafes, boutique spaces, alco-bev labels, and festivals across Goa and India.</p>
           <p>That foundation is strengthened further by direct operating exposure through Unit 22, creating a stronger bridge between insight and execution.</p>
           <br>
           <a href="about.html" class="btn btn--outline-light">
@@ -316,6 +295,73 @@
             <li>Consistency without dilution</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXTENSIONS -->
+  <section class="extensions-preview">
+    <div class="container">
+      <div class="extensions-preview__header reveal">
+        <h2>Extensions</h2>
+        <p>Optional layers activated only when they strengthen the core system. A core retainer is required for all extensions.</p>
+      </div>
+
+      <!-- Growth Extensions -->
+      <div class="ext-category reveal">
+        <p class="ext-category__label">Growth Extensions</p>
+        <div class="ext-category__grid ext-category__grid--4">
+          <div class="ext-box">
+            <h4 class="ext-box__name">Launch, PR &amp; Visibility</h4>
+            <p class="ext-box__desc">Stronger messaging, rollout, and external visibility for new menus, spaces, campaigns, or announcements.</p>
+          </div>
+          <div class="ext-box">
+            <h4 class="ext-box__name">Paid Media &amp; Growth</h4>
+            <p class="ext-box__desc">Paid reach layered onto the core system for campaigns, launches, or growth pushes.</p>
+          </div>
+          <div class="ext-box">
+            <h4 class="ext-box__name">Creator &amp; Community Marketing</h4>
+            <p class="ext-box__desc">Authentic visibility through creators and communities aligned with the brand's culture.</p>
+          </div>
+          <div class="ext-box">
+            <h4 class="ext-box__name">Event Coverage &amp; Content Distribution</h4>
+            <p class="ext-box__desc">Capture, package, and distribute existing events properly across owned channels.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand Extensions -->
+      <div class="ext-category reveal">
+        <p class="ext-category__label">Brand Extensions</p>
+        <div class="ext-category__grid ext-category__grid--2">
+          <div class="ext-box">
+            <h4 class="ext-box__name">Digital Experience &amp; Website Strategy</h4>
+            <p class="ext-box__desc">A stronger digital home aligned with the brand's storytelling and campaigns.</p>
+          </div>
+          <div class="ext-box">
+            <h4 class="ext-box__name">Brand Systems, Packaging &amp; Merchandise</h4>
+            <p class="ext-box__desc">Physical brand touchpoints that reinforce identity and recall.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Special Projects -->
+      <div class="ext-category reveal">
+        <p class="ext-category__label">Special Projects</p>
+        <div class="ext-category__grid ext-category__grid--2">
+          <div class="ext-box">
+            <h4 class="ext-box__name">Event Amplification Kit (EAK)</h4>
+            <p class="ext-box__desc">A full event-led campaign engine for audience engagement, content, on-ground momentum, and long-term brand positioning.</p>
+          </div>
+          <div class="ext-box">
+            <h4 class="ext-box__name">Thought Leadership &amp; Founder Visibility</h4>
+            <p class="ext-box__desc">Stronger public positioning for founders or leadership teams, tied back to the brand.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="extensions-preview__footer reveal">
+        <a href="services.html" class="btn btn--outline btn--sm">View Full Extensions <span class="btn__arrow">&rarr;</span></a>
       </div>
     </div>
   </section>
