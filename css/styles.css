@@ -5,16 +5,16 @@
 
 /* --- Design Tokens --- */
 :root {
-  --charcoal: #2C2826;
-  --charcoal-light: #3D3835;
-  --charcoal-deep: #1E1C1A;
-  --cream: #F4F0EB;
-  --warm-gray: #E4DFD8;
-  --light-gray: #D0CBC4;
-  --text: #2C2826;
-  --text-light: #7A7268;
+  --charcoal: #0B0B6B;
+  --charcoal-light: #1a1a8a;
+  --charcoal-deep: #060642;
+  --cream: #F5F4F0;
+  --warm-gray: #E8E6E2;
+  --light-gray: #D4D4D0;
+  --text: #1A1A1A;
+  --text-light: #6B6B6B;
   --white: #FFFFFF;
-  --accent: #8B7D6B;
+  --accent: #0B0B6B;
 
   --font-serif: 'Playfair Display', 'Georgia', serif;
   --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
