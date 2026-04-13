@@ -490,6 +490,70 @@ section {
 }
 
 /* ============================================
+   FOUNDER SECTION
+   ============================================ */
+.founder {
+  background: var(--cream);
+  padding: 100px 0;
+}
+
+.founder__inner {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.founder__image img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  filter: grayscale(20%);
+}
+
+.founder__content .label {
+  margin-bottom: 16px;
+}
+
+.founder__content h2 {
+  margin-bottom: 20px;
+  max-width: 560px;
+}
+
+.founder__content p {
+  margin-bottom: 16px;
+}
+
+/* ============================================
+   CTA PHONE
+   ============================================ */
+.cta__phone {
+  margin-top: 28px;
+  max-width: none;
+}
+
+.cta__phone a {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.6);
+  font-family: var(--font-sans);
+  letter-spacing: 0.02em;
+}
+
+.cta__phone a:hover {
+  color: var(--white);
+}
+
+/* ============================================
+   PREMIUM DETAIL PRICE
+   ============================================ */
+.premium-detail__price {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+/* ============================================
    BACKED BY BANNER (Homepage)
    ============================================ */
 .backed-banner {
@@ -2062,9 +2126,14 @@ section {
   .about__grid,
   .how-we-work__grid,
   .contact__grid,
-  .backed-by__inner {
+  .backed-by__inner,
+  .founder__inner {
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+
+  .founder__image {
+    max-width: 280px;
   }
 
   .retainers__grid {
