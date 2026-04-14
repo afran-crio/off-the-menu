@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Extensions — Off The Menu</title>
+<meta name="description" content="Optional layers activated only when they strengthen the core system. Launch, paid media, creator marketing, events, packaging, founder visibility." />
+<link rel="icon" type="image/png" href="assets/logos/otm_monogram_color.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#060642;--bg-elev:#0B0B6B;--bg-soft:#1a1a8a;
+    --text:#fafafa;--text-60:rgba(250,250,250,.6);--text-40:rgba(250,250,250,.4);
+    --accent:#0000FF;--border:rgba(250,250,250,.12);
+    --header-h:72px;--margin:24px;--gap:24px;--radius:14px;
+  }
+  @media (max-width:767px){:root{--margin:16px;--gap:16px}}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html,body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+
+  .nav{position:fixed;top:0;left:0;right:0;height:var(--header-h);padding:0 var(--margin);display:flex;align-items:center;justify-content:space-between;background:rgba(6,6,66,.72);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid var(--border);z-index:50}
+  .logo img{height:22px;width:auto;filter:brightness(0) invert(1)}
+  .nav-links{display:flex;gap:28px;font-size:14px;color:var(--text-60)}
+  .nav-links a:hover{color:var(--text)}
+  .nav-links a.active{color:var(--text)}
+  .nav-cta{padding:10px 18px;border:1px solid var(--border);border-radius:999px;font-size:13px;transition:background .2s,border-color .2s}
+  .nav-cta:hover{background:rgba(250,250,250,.06);border-color:var(--text-40)}
+  @media (max-width:767px){.nav-links{display:none}}
+
+  main{padding-top:calc(var(--header-h) + 64px)}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 var(--margin)}
+  section{margin-bottom:96px}
+  @media (min-width:768px){section{margin-bottom:120px}}
+
+  /* HERO */
+  .page-hero{padding:40px 0 64px;text-align:center}
+  .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text-40);margin-bottom:20px}
+  .page-hero h1{font-family:'Playfair Display',serif;font-weight:300;font-size:clamp(40px,6vw,80px);line-height:1.05;letter-spacing:-0.035em;max-width:1000px;margin:0 auto}
+  .page-hero h1 em{font-style:italic;font-weight:400}
+  .page-hero p{margin-top:24px;color:var(--text-60);font-size:clamp(15px,1.3vw,18px);max-width:640px;margin-left:auto;margin-right:auto;line-height:1.55}
+
+  .note{max-width:800px;margin:0 auto;padding:20px 24px;border:1px solid var(--border);border-radius:12px;background:rgba(250,250,250,.03);font-size:14px;color:var(--text-60);text-align:center}
+  .note strong{color:var(--text);font-weight:500}
+
+  /* CATEGORY */
+  .cat-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border);gap:40px;flex-wrap:wrap}
+  .cat-header .label{font-size:12px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text-40)}
+  .cat-header h2{font-family:'Playfair Display',serif;font-weight:300;font-size:clamp(28px,3vw,40px);line-height:1.1;letter-spacing:-0.025em;max-width:700px}
+
+  /* EXTENSION CARD */
+  .ext-list{display:grid;grid-template-columns:1fr;gap:var(--gap)}
+  .ext{border:1px solid var(--border);border-radius:var(--radius);padding:32px;background:rgba(250,250,250,.02);transition:background .25s,border-color .25s}
+  .ext:hover{background:rgba(250,250,250,.04);border-color:var(--text-40)}
+  .ext.featured{background:linear-gradient(160deg,var(--bg-elev),var(--bg-soft));border-color:rgba(250,250,250,.2)}
+  .ext-head{display:grid;grid-template-columns:40px 1fr auto;gap:20px;align-items:start;margin-bottom:24px}
+  @media (max-width:639px){.ext-head{grid-template-columns:1fr;gap:8px}.ext-head .num{font-size:13px}}
+  .ext .num{font-family:'Playfair Display',serif;font-size:16px;color:var(--text-40);letter-spacing:0.05em}
+  .ext h3{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(22px,2.2vw,28px);line-height:1.15;letter-spacing:-0.015em;margin-bottom:10px}
+  .ext .desc{color:var(--text-60);font-size:15px;line-height:1.6;max-width:60ch}
+  .ext .timeline{font-size:12px;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-40);white-space:nowrap;padding-top:6px}
+  .ext-body{display:grid;grid-template-columns:1fr;gap:24px;padding-top:24px;border-top:1px solid var(--border)}
+  @media (min-width:768px){.ext-body{grid-template-columns:1fr}}
+  .ext .col-label{font-size:11px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text-40);margin-bottom:14px}
+  .ext ul{list-style:none;display:grid;grid-template-columns:1fr;gap:8px}
+  @media (min-width:640px){.ext ul{grid-template-columns:repeat(2,1fr);column-gap:32px}}
+  .ext li{font-size:14px;color:var(--text);padding-left:18px;position:relative;line-height:1.5}
+  .ext li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:1px;background:var(--text-40)}
+  .ext .not{margin-top:20px;font-size:13px;color:var(--text-40);font-style:italic;line-height:1.55}
+
+  .note-footer{max-width:900px;margin:64px auto 0;padding:24px;border-top:1px solid var(--border);text-align:center;color:var(--text-40);font-size:14px;line-height:1.6}
+  .note-footer strong{color:var(--text-60)}
+
+  /* CTA */
+  .cta{background:linear-gradient(160deg,var(--bg-elev),var(--bg-soft));border-radius:var(--radius);padding:56px var(--margin);text-align:center}
+  .cta h2{font-family:'Playfair Display',serif;font-weight:300;font-size:clamp(26px,3vw,38px);line-height:1.15;letter-spacing:-0.025em;max-width:700px;margin:0 auto}
+  .cta p{color:var(--text-60);margin-top:16px;max-width:560px;margin-left:auto;margin-right:auto;font-size:15px}
+  .btn-primary{background:var(--text);color:var(--bg);padding:14px 24px;border-radius:999px;font-size:14px;font-weight:500;display:inline-flex;align-items:center;gap:10px;transition:transform .2s,opacity .2s;margin-top:28px}
+  .btn-primary:hover{transform:translateY(-1px);opacity:.92}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--border);padding:56px var(--margin) 32px;margin-top:32px}
+  .foot-grid{max-width:1440px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:40px}
+  @media (min-width:768px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+  .foot h5{font-size:12px;text-transform:uppercase;letter-spacing:0.14em;color:var(--text-40);margin-bottom:16px}
+  .foot a{display:block;padding:5px 0;color:var(--text-60);font-size:14px}
+  .foot a:hover{color:var(--text)}
+  .foot-brand p{color:var(--text-60);max-width:360px;margin-top:12px;font-size:14px;line-height:1.6}
+  .foot-bottom{max-width:1440px;margin:40px auto 0;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;color:var(--text-40);font-size:12px;flex-wrap:wrap;gap:12px}
+
+  ::selection{background:var(--accent);color:#fff}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a href="bold-clone.html" class="logo"><img src="assets/logos/otm_wordmark_white.png" alt="Off The Menu" /></a>
+  <nav class="nav-links">
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="extensions.html" class="active">Extensions</a>
+  </nav>
+  <a href="contact.html" class="nav-cta">Get in touch</a>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero wrap">
+    <p class="eyebrow">Ecosystem</p>
+    <h1>Extensions built to <em>strengthen the system.</em></h1>
+    <p>Optional layers activated only when they add measurable value on top of a core retainer. Scoped and priced separately — never pushed, never padded.</p>
+  </section>
+
+  <section class="wrap">
+    <div class="note">A core retainer — <strong>Starter</strong>, <strong>Growth</strong>, or <strong>Premium</strong> — is required for all extensions.</div>
+  </section>
+
+  <!-- GROWTH EXTENSIONS -->
+  <section class="wrap" id="growth">
+    <div class="cat-header">
+      <div>
+        <p class="label">Growth Extensions</p>
+        <h2>Accelerate visibility, reach, and campaign momentum.</h2>
+      </div>
+    </div>
+    <div class="ext-list">
+
+      <article class="ext">
+        <div class="ext-head">
+          <span class="num">01</span>
+          <div>
+            <h3>Launch, PR &amp; Visibility</h3>
+            <p class="desc">Stronger messaging, rollout, and external visibility for new menus, spaces, campaigns, or announcements.</p>
+          </div>
+          <span class="timeline">3 – 5 weeks</span>
+        </div>
+        <div class="ext-body">
+          <div>
+            <p class="col-label">Deliverables</p>
+            <ul>
+              <li>Launch strategy document</li>
+              <li>Campaign messaging framework</li>
+              <li>Creative direction / asset brief</li>
+              <li>PR angle &amp; media outreach note</li>
+              <li>Rollout calendar</li>
+              <li>PR coverage summary</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="ext">
+        <div class="ext-head">
+          <span class="num">02</span>
+          <div>
+            <h3>Paid Media &amp; Growth</h3>
+            <p class="desc">Paid reach layered onto the core system for campaigns, launches, or growth pushes.</p>
+          </div>
+          <span class="timeline">Campaign-based</span>
+        </div>
+        <div class="ext-body">
+          <div>
+            <p class="col-label">Deliverables</p>
+            <ul>
+              <li>Paid media strategy deck</li>
+              <li>Campaign structure &amp; targeting</li>
+              <li>Ad copy &amp; creative brief</li>
+              <li>Campaign creatives as scoped</li>
+              <li>Performance summary &amp; learnings</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="ext">
+        <div class="ext-head">
+          <span class="num">03</span>
+          <div>
+            <h3>Creator &amp; Community Marketing</h3>
+            <p class="desc">Authentic visibility through creators and communities aligned with the brand's culture.</p>
+          </div>
+          <span class="timeline">3 – 5 weeks</span>
+        </div>
+        <div class="ext-body">
+          <div>
+            <p class="col-label">Deliverables</p>
+            <ul>
+              <li>Creator strategy &amp; shortlist</li>
+              <li>Collaboration concept note</li>
+              <li>Outreach structure</li>
+              <li>Rollout plan</li>
+              <li>Published content &amp; engagement summary</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="ext">
+        <div class="ext-head">
+          <span class="num">04</span>
+          <div>
+            <h3>Event Coverage &amp; Distribution</h3>
+            <p class="desc">Capture, package, and distribute existing events properly across owned channels.</p>
+          </div>
+          <span class="timeline">2 – 3 weeks</span>
+        </div>
+        <div class="ext-body">
+          <div>
+            <p class="col-label">Deliverables</p>
+            <ul>
+              <li>Pre-event rollout plan</li>
+              <li>Event-day photo / video coverage</li>
+              <li>Recap content</li>
+              <li>Social-ready assets</li>
+              <li>Post-event distribution support</li>
+              <li>Engagement summary</li>
+            </ul>
+          </div>
+        </div>
+        <p class="not">Not included: paid ads, PR outreach, influencer invites, guest-list building, artist booking, or on-ground execution.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- BRAND EXTENSIONS -->
+  <section class="wrap" id="brand">
+    <div class="cat-header">
+      <div>
+        <p class="label">Brand Extensions</p>
+        <h2>Strengthen how the brand is experienced beyond the feed.</h2>
+      </div>
+    </div>
+    <div class="ext-list">
+
+      <article class="ext">
+        <div class="ext-head">
+          <span class="num">05</span>
+          <div>
+            <h3>Digital Experience &amp; Website Strategy</h3>
+            <p class="desc">A stronger digital home aligned with the brand's storytelling and campaigns.</p>
+          </div>
+          <span class="timeline">3 – 4 weeks</span>
+        </div>
+        <div class="ext-body">
+          <div>
+            <p class="col-label">Deliverables</p>
+            <ul>
+              <li>Website content structure &amp; narrative</li>
+              <li>Page-wise copy direction</li>
+              <li>Visual &amp; tone guidelines</li>
+              <li>Developer handoff note</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="ext">
+        <div class="ext-head">
+          <span class="num">06</span>
+          <div>
+            <h3>Brand Systems, Packaging &amp; Merchandise</h3>
+            <p class="desc">Physical brand touchpoints that reinforce identity and recall.</p>
+          </div>
+          <span class="timeline">3 – 4 weeks</span>
+        </div>
+        <div class="ext-body">
+          <div>
+            <p class="col-label">Deliverables</p>
+            <ul>
+              <li>Brand system direction</li>
+              <li>Packaging / merchandise concepts</li>
+              <li>Menu / collateral design direction</li>
+              <li>Production-ready files</li>
+              <li>Usage guidelines</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SPECIAL PROJECTS -->
+  <section class="wrap" id="special">
+    <div class="cat-header">
+      <div>
+        <p class="label">Special Projects</p>
+        <h2>Larger-format, campaign-led, or founder-led initiatives.</h2>
+      </div>
+    </div>
+    <div class="ext-list">
+
+      <article class="ext featured">
+        <div class="ext-head">
+          <span class="num">07</span>
+          <div>
+            <h3>Event Amplification Kit (EAK)</h3>
+            <p class="desc">A full event-led campaign engine designed to drive audience engagement, campaign-ready content, on-ground momentum, and long-term brand positioning through one high-impact moment.</p>
+          </div>
+          <span class="timeline">2 – 3 wks + event</span>
+        </div>
+        <div class="ext-body">
+          <div>
+            <p class="col-label">Deliverables</p>
+            <ul>
+              <li>Event concept / IP adaptation plan</li>
+              <li>Promo campaign plan</li>
+              <li>Pre-event promo video</li>
+              <li>Aftermovie</li>
+              <li>100+ edited event photos</li>
+              <li>Flyers, stories, lineup, ticketing banners</li>
+              <li>Guest-list framework</li>
+              <li>Campaign-ready content stack</li>
+            </ul>
+          </div>
+        </div>
+        <p class="not">This is not a light extension. It is a full event-led campaign package.</p>
+      </article>
+
+      <article class="ext">
+        <div class="ext-head">
+          <span class="num">08</span>
+          <div>
+            <h3>Thought Leadership &amp; Founder Visibility</h3>
+            <p class="desc">Stronger public positioning for founders or leadership teams, tied back to the brand.</p>
+          </div>
+          <span class="timeline">2 – 3 weeks</span>
+        </div>
+        <div class="ext-body">
+          <div>
+            <p class="col-label">Deliverables</p>
+            <ul>
+              <li>Founder positioning document</li>
+              <li>Content themes &amp; direction</li>
+              <li>Visibility roadmap</li>
+              <li>Talking points / narrative note</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="note-footer">All extensions are scoped and priced separately based on requirements. <strong>Third-party spends — ad budgets, creator fees, PR placements, production vendors, and printing — remain separate unless explicitly included.</strong></p>
+  </section>
+
+  <!-- CTA -->
+  <section class="wrap">
+    <div class="cta">
+      <h2>Not sure which layer fits?</h2>
+      <p>Start with the 2-minute diagnostic — we'll recommend the core system and the extensions that actually move the needle for your stage.</p>
+      <a href="conversation.html" class="btn-primary">Start the diagnostic →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div class="foot foot-brand">
+      <a class="logo" href="bold-clone.html"><img src="assets/logos/otm_wordmark_white.png" alt="Off The Menu" style="height:22px;filter:brightness(0) invert(1)"/></a>
+      <p>Brand strategy and content systems for modern hospitality. Powered by Crio Connect.</p>
+    </div>
+    <div class="foot">
+      <h5>Explore</h5>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="extensions.html">Extensions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="foot">
+      <h5>Extensions</h5>
+      <a href="extensions.html#growth">Growth</a>
+      <a href="extensions.html#brand">Brand</a>
+      <a href="extensions.html#special">Special Projects</a>
+    </div>
+    <div class="foot">
+      <h5>Connect</h5>
+      <a href="mailto:otm@crioconnect.com">otm@crioconnect.com</a>
+      <a href="tel:+917972405197">+91 7972 405 197</a>
+      <a href="https://instagram.com/offthemenu.in" target="_blank" rel="noopener">@offthemenu.in</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Off The Menu · Powered by Crio Connect</span>
+    <span>Goa · India</span>
+  </div>
+</footer>
+
+</body>
+</html>
